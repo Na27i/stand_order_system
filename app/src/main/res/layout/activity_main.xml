@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/プレーン"
+        android:layout_width="240"
+        android:layout_height="120"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/flame_style"
+        android:gravity="center|top"
+        android:text="@string/プレーン"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/プレーンA"
+        android:layout_width="88dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="51dp"
+        android:text="@string/plus"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/プレーン"
+        app:layout_constraintTop_toTopOf="@+id/プレーン" />
+
+    <Button
+        android:id="@+id/プレーンB"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/minus"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/プレーン"
+        app:layout_constraintTop_toTopOf="@+id/プレーン" />
+
+    <TextView
+        android:id="@+id/しょうゆ"
+        android:layout_width="240"
+        android:layout_height="120dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/flame_style"
+        android:gravity="center|top"
+        android:text="@string/しょうゆ"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/プレーン" />
+
+    <Button
+        android:id="@+id/しょうゆA"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="51dp"
+        android:text="@string/plus"
+        app:layout_constraintStart_toStartOf="@+id/しょうゆ"
+        app:layout_constraintTop_toTopOf="@+id/しょうゆ" />
+
+    <Button
+        android:id="@+id/しょうゆB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/minus"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/しょうゆ"
+        app:layout_constraintTop_toTopOf="@+id/しょうゆ" />
+
+    <TextView
+        android:id="@+id/明太"
+        android:layout_width="240"
+        android:layout_height="120"
+        android:layout_marginStart="76dp"
+        android:layout_marginLeft="76dp"
+        android:layout_marginBottom="732dp"
+        android:background="@drawable/flame_style"
+        android:gravity="center|top"
+        android:text="@string/明太"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/プレーン" />
+
+    <Button
+        android:id="@+id/明太A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="51dp"
+        android:text="@string/plus"
+        app:layout_constraintStart_toStartOf="@+id/明太"
+        app:layout_constraintTop_toTopOf="@+id/明太" />
+
+    <Button
+        android:id="@+id/明太B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/minus"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/明太"
+        app:layout_constraintTop_toTopOf="@+id/明太" />
+
+    <TextView
+        android:id="@+id/ピザ"
+        android:layout_width="240"
+        android:layout_height="120"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/flame_style"
+        android:gravity="center|top"
+        android:text="@string/ピザ"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/しょうゆ" />
+
+    <Button
+        android:id="@+id/ピザA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="51dp"
+        android:text="@string/plus"
+        app:layout_constraintStart_toStartOf="@+id/ピザ"
+        app:layout_constraintTop_toTopOf="@+id/ピザ" />
+
+    <Button
+        android:id="@+id/ピザB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/minus"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/ピザ"
+        app:layout_constraintTop_toTopOf="@+id/ピザ" />
+
+    <TextView
+        android:id="@+id/デスソース"
+        android:layout_width="240"
+        android:layout_height="120"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/flame_style"
+        android:gravity="center|top"
+        android:text="@string/デスソース"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ピザ" />
+
+    <Button
+        android:id="@+id/デスソースA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="51dp"
+        android:text="@string/plus"
+        app:layout_constraintStart_toStartOf="@+id/デスソース"
+        app:layout_constraintTop_toTopOf="@+id/デスソース" />
+
+    <Button
+        android:id="@+id/デスソースB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/minus"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/デスソース"
+        app:layout_constraintTop_toTopOf="@+id/デスソース" />
+
+    <TextView
+        android:id="@+id/はちみつ"
+        android:layout_width="240"
+        android:layout_height="120"
+        android:layout_marginStart="76dp"
+        android:layout_marginLeft="76dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/flame_style"
+        android:gravity="center|top"
+        android:text="@string/はちみつ"
+        android:textSize="36sp"
+        app:layout_constraintStart_toEndOf="@+id/しょうゆ"
+        app:layout_constraintTop_toBottomOf="@+id/明太" />
+
+    <Button
+        android:id="@+id/はちみつB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/minus"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/はちみつ"
+        app:layout_constraintTop_toTopOf="@+id/はちみつ" />
+
+    <Button
+        android:id="@+id/はちみつA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/plus"
+        app:layout_constraintStart_toStartOf="@+id/はちみつ"
+        app:layout_constraintTop_toTopOf="@+id/はちみつ" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
