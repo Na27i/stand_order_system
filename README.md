@@ -1,0 +1,2 @@
+# stand_order_system
+文化祭の屋台での注文管理用androidアプリケーション
