@@ -1,19 +1,389 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/price_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#00FFFFFF"
+    android:visibility="visible"
     tools:context=".MainActivity">
 
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/pcice_waku"
+        android:layout_width="276dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/frame"
+        android:gravity="center|end"
+        android:text="@string/empty"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="206dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:gravity="center|end"
+        android:text="@string/price"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/pcice_waku"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pcice_waku" />
+
+    <TextView
+        android:id="@+id/yen"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="256dp"
+        android:layout_marginRight="256dp"
+        android:gravity="center"
+        android:text="@string/yen"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ok"
+        android:layout_width="70dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="168dp"
+        android:layout_marginRight="168dp"
+        android:background="@drawable/frame"
+        android:gravity="center"
+        android:text="@string/ok"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/menu_waku"
+        android:layout_width="460dp"
+        android:layout_height="601dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/frame"
+        android:text="@string/empty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pcice_waku" />
+
+    <TextView
+        android:id="@+id/プレーン"
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/frame"
+        android:gravity="center_horizontal"
+        android:text="@string/プレーン"
+        android:textIsSelectable="false"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/menu_waku"
+        app:layout_constraintTop_toTopOf="@+id/menu_waku" />
+
+    <Button
+        android:id="@+id/プレーンA"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/プラス"
+        app:layout_constraintBottom_toBottomOf="@+id/プレーン"
+        app:layout_constraintStart_toStartOf="@+id/プレーン" />
+
+    <Button
+        android:id="@+id/プレーンB"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/マイナス"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/プレーン"
+        app:layout_constraintEnd_toEndOf="@+id/プレーン" />
+
+    <TextView
+        android:id="@+id/プレーン個数"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/プレーン個数"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/プレーン"
+        app:layout_constraintEnd_toEndOf="@+id/プレーン"
+        app:layout_constraintHorizontal_bias="0.519"
+        app:layout_constraintStart_toStartOf="@+id/プレーン" />
+
+    <TextView
+        android:id="@+id/しょうゆ"
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/frame"
+        android:gravity="center_horizontal"
+        android:text="@string/しょうゆ"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/menu_waku"
+        app:layout_constraintTop_toBottomOf="@id/プレーン" />
+
+    <Button
+        android:id="@+id/しょうゆA"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/プラス"
+        app:layout_constraintBottom_toBottomOf="@+id/しょうゆ"
+        app:layout_constraintStart_toStartOf="@+id/しょうゆ" />
+
+    <Button
+        android:id="@+id/しょうゆB"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/マイナス"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/しょうゆ"
+        app:layout_constraintEnd_toEndOf="@+id/しょうゆ" />
+
+    <TextView
+        android:id="@+id/しょうゆ個数"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/しょうゆ個数"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/しょうゆ"
+        app:layout_constraintEnd_toEndOf="@+id/しょうゆ"
+        app:layout_constraintStart_toStartOf="@+id/しょうゆ" />
+
+    <TextView
+        android:id="@+id/明太"
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/frame"
+        android:gravity="center_horizontal"
+        android:text="@string/明太"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/menu_waku"
+        app:layout_constraintTop_toBottomOf="@+id/しょうゆ" />
+
+    <Button
+        android:id="@+id/明太A"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/プラス"
+        app:layout_constraintBottom_toBottomOf="@+id/明太"
+        app:layout_constraintStart_toStartOf="@+id/明太" />
+
+    <Button
+        android:id="@+id/明太B"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/マイナス"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/明太"
+        app:layout_constraintEnd_toEndOf="@+id/明太" />
+
+    <TextView
+        android:id="@+id/明太個数"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/明太個数"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/明太"
+        app:layout_constraintEnd_toEndOf="@+id/明太"
+        app:layout_constraintStart_toStartOf="@+id/明太" />
+
+    <TextView
+        android:id="@+id/ピザ"
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/frame"
+        android:gravity="center_horizontal"
+        android:text="@string/ピザ"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/menu_waku"
+        app:layout_constraintTop_toTopOf="@+id/menu_waku" />
+
+    <Button
+        android:id="@+id/ピザA"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/プラス"
+        app:layout_constraintBottom_toBottomOf="@+id/ピザ"
+        app:layout_constraintStart_toStartOf="@+id/ピザ" />
+
+    <Button
+        android:id="@+id/ピザB"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/マイナス"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ピザ"
+        app:layout_constraintEnd_toEndOf="@+id/ピザ" />
+
+    <TextView
+        android:id="@+id/ピザ個数"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/ピザ個数"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ピザ"
+        app:layout_constraintEnd_toEndOf="@+id/ピザ"
+        app:layout_constraintStart_toStartOf="@+id/ピザ" />
+
+    <TextView
+        android:id="@+id/デスソース"
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/frame"
+        android:gravity="center_horizontal"
+        android:text="@string/デスソース"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/menu_waku"
+        app:layout_constraintTop_toBottomOf="@+id/ピザ" />
+
+    <Button
+        android:id="@+id/デスソースA"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/プラス"
+        app:layout_constraintBottom_toBottomOf="@+id/デスソース"
+        app:layout_constraintStart_toStartOf="@+id/デスソース" />
+
+    <Button
+        android:id="@+id/デスソースB"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/マイナス"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/デスソース"
+        app:layout_constraintEnd_toEndOf="@+id/デスソース" />
+
+    <TextView
+        android:id="@+id/デスソース個数"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/デスソース個数"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/デスソース"
+        app:layout_constraintEnd_toEndOf="@+id/デスソース"
+        app:layout_constraintStart_toStartOf="@+id/デスソース" />
+
+    <TextView
+        android:id="@+id/はちみつ"
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/frame"
+        android:gravity="center_horizontal"
+        android:text="@string/はちみつ"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/menu_waku"
+        app:layout_constraintTop_toBottomOf="@+id/デスソース" />
+
+    <Button
+        android:id="@+id/はちみつA"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/プラス"
+        app:layout_constraintBottom_toBottomOf="@+id/はちみつ"
+        app:layout_constraintStart_toStartOf="@+id/はちみつ" />
+
+    <Button
+        android:id="@+id/はちみつB"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/マイナス"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/はちみつ"
+        app:layout_constraintEnd_toEndOf="@+id/はちみつ" />
+
+    <TextView
+        android:id="@+id/はちみつ個数"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/はちみつ個数"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/はちみつ"
+        app:layout_constraintEnd_toEndOf="@+id/はちみつ"
+        app:layout_constraintStart_toStartOf="@+id/はちみつ" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="223dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:background="@drawable/frame"
+        android:text="@string/リセット"
+        android:textAllCaps="true"
+        android:textColor="#E91E63"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/menu_waku"
+        app:layout_constraintTop_toBottomOf="@+id/はちみつ" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

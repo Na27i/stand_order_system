@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">order_side</string>
+    <string name="price">0</string>
+    <string name="ok">OK</string>
+    <string name="empty"></string>
+    <string name="yen">円</string>
+
+    <string name="プレーン">プレーン</string>
+    <string name="しょうゆ">しょうゆ</string>
+    <string name="明太">明太</string>
+    <string name="ピザ">ピザ</string>
+    <string name="デスソース">デスソース</string>
+    <string name="はちみつ">はちみつ</string>
+
+    <string name="プレーン個数">0</string>
+    <string name="しょうゆ個数">0</string>
+    <string name="明太個数">0</string>
+    <string name="ピザ個数">0</string>
+    <string name="デスソース個数">0</string>
+    <string name="はちみつ個数">0</string>
+
+    <string name="プラス">+</string>
+    <string name="マイナス">-</string>
+    <string name="リセット">Reset</string>
+
+
 </resources>
