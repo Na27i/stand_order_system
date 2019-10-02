@@ -12,78 +12,95 @@
 
     <TextView
         android:id="@+id/pcice_waku"
-        android:layout_width="276dp"
+        android:layout_width="271dp"
         android:layout_height="65dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/frame"
         android:gravity="center|end"
         android:text="@string/empty"
         android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/menu_waku"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/price"
         android:layout_width="206dp"
         android:layout_height="50dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:gravity="center|end"
         android:text="@string/price"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/pcice_waku"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/pcice_waku"
         app:layout_constraintTop_toTopOf="@+id/pcice_waku" />
 
     <TextView
         android:id="@+id/yen"
         android:layout_width="65dp"
         android:layout_height="65dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="256dp"
-        android:layout_marginRight="256dp"
         android:gravity="center"
         android:text="@string/yen"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/ok"
-        android:layout_width="70dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="168dp"
-        android:layout_marginRight="168dp"
-        android:background="@drawable/frame"
-        android:gravity="center"
-        android:text="@string/ok"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/pcice_waku"
+        app:layout_constraintTop_toTopOf="@+id/pcice_waku" />
 
     <TextView
         android:id="@+id/menu_waku"
-        android:layout_width="460dp"
-        android:layout_height="601dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="531dp"
+        android:layout_height="670dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/frame"
         android:text="@string/empty"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pcice_waku" />
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="210dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/frame"
+        android:text="@string/ok"
+        android:textAllCaps="true"
+        android:textColor="#1E40E9"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/menu_waku"
+        app:layout_constraintTop_toBottomOf="@+id/明太" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="210dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/frame"
+        android:text="@string/リセット"
+        android:textAllCaps="true"
+        android:textColor="#E91E63"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/menu_waku"
+        app:layout_constraintTop_toBottomOf="@+id/はちみつ" />
 
     <TextView
         android:id="@+id/プレーン"
-        android:layout_width="180dp"
-        android:layout_height="120dp"
+        android:layout_width="210dp"
+        android:layout_height="150dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/frame"
         android:gravity="center_horizontal"
+        android:paddingTop="20dp"
         android:text="@string/プレーン"
         android:textIsSelectable="false"
         android:textSize="30sp"
@@ -92,49 +109,49 @@
 
     <Button
         android:id="@+id/プレーンA"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/プラス"
-        app:layout_constraintBottom_toBottomOf="@+id/プレーン"
-        app:layout_constraintStart_toStartOf="@+id/プレーン" />
-
-    <Button
-        android:id="@+id/プレーンB"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/マイナス"
-        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:text="@string/プラス"
         app:layout_constraintBottom_toBottomOf="@+id/プレーン"
         app:layout_constraintEnd_toEndOf="@+id/プレーン" />
 
+    <Button
+        android:id="@+id/プレーンB"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/マイナス"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/プレーン"
+        app:layout_constraintStart_toStartOf="@+id/プレーン" />
+
     <TextView
         android:id="@+id/プレーン個数"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
         android:gravity="center"
         android:text="@string/プレーン個数"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/プレーン"
         app:layout_constraintEnd_toEndOf="@+id/プレーン"
-        app:layout_constraintHorizontal_bias="0.519"
         app:layout_constraintStart_toStartOf="@+id/プレーン" />
 
     <TextView
         android:id="@+id/しょうゆ"
-        android:layout_width="180dp"
-        android:layout_height="120dp"
+        android:layout_width="210dp"
+        android:layout_height="150dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/frame"
         android:gravity="center_horizontal"
+        android:paddingTop="20dp"
         android:text="@string/しょうゆ"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="@+id/menu_waku"
@@ -142,32 +159,32 @@
 
     <Button
         android:id="@+id/しょうゆA"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/プラス"
-        app:layout_constraintBottom_toBottomOf="@+id/しょうゆ"
-        app:layout_constraintStart_toStartOf="@+id/しょうゆ" />
-
-    <Button
-        android:id="@+id/しょうゆB"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/マイナス"
-        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:text="@string/プラス"
         app:layout_constraintBottom_toBottomOf="@+id/しょうゆ"
         app:layout_constraintEnd_toEndOf="@+id/しょうゆ" />
 
+    <Button
+        android:id="@+id/しょうゆB"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/マイナス"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/しょうゆ"
+        app:layout_constraintStart_toStartOf="@+id/しょうゆ" />
+
     <TextView
         android:id="@+id/しょうゆ個数"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
         android:gravity="center"
         android:text="@string/しょうゆ個数"
         android:textSize="30sp"
@@ -177,13 +194,14 @@
 
     <TextView
         android:id="@+id/明太"
-        android:layout_width="180dp"
-        android:layout_height="120dp"
+        android:layout_width="210dp"
+        android:layout_height="150dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/frame"
         android:gravity="center_horizontal"
+        android:paddingTop="20dp"
         android:text="@string/明太"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="@+id/menu_waku"
@@ -191,32 +209,32 @@
 
     <Button
         android:id="@+id/明太A"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/プラス"
-        app:layout_constraintBottom_toBottomOf="@+id/明太"
-        app:layout_constraintStart_toStartOf="@+id/明太" />
-
-    <Button
-        android:id="@+id/明太B"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/マイナス"
-        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:text="@string/プラス"
         app:layout_constraintBottom_toBottomOf="@+id/明太"
         app:layout_constraintEnd_toEndOf="@+id/明太" />
 
+    <Button
+        android:id="@+id/明太B"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/マイナス"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/明太"
+        app:layout_constraintStart_toStartOf="@+id/明太" />
+
     <TextView
         android:id="@+id/明太個数"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
         android:gravity="center"
         android:text="@string/明太個数"
         android:textSize="30sp"
@@ -226,13 +244,14 @@
 
     <TextView
         android:id="@+id/ピザ"
-        android:layout_width="180dp"
-        android:layout_height="120dp"
+        android:layout_width="210dp"
+        android:layout_height="150dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:background="@drawable/frame"
         android:gravity="center_horizontal"
+        android:paddingTop="20dp"
         android:text="@string/ピザ"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@+id/menu_waku"
@@ -240,32 +259,32 @@
 
     <Button
         android:id="@+id/ピザA"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/プラス"
-        app:layout_constraintBottom_toBottomOf="@+id/ピザ"
-        app:layout_constraintStart_toStartOf="@+id/ピザ" />
-
-    <Button
-        android:id="@+id/ピザB"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/マイナス"
-        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:text="@string/プラス"
         app:layout_constraintBottom_toBottomOf="@+id/ピザ"
         app:layout_constraintEnd_toEndOf="@+id/ピザ" />
 
+    <Button
+        android:id="@+id/ピザB"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/マイナス"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ピザ"
+        app:layout_constraintStart_toStartOf="@+id/ピザ" />
+
     <TextView
         android:id="@+id/ピザ個数"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
         android:gravity="center"
         android:text="@string/ピザ個数"
         android:textSize="30sp"
@@ -275,13 +294,14 @@
 
     <TextView
         android:id="@+id/デスソース"
-        android:layout_width="180dp"
-        android:layout_height="120dp"
+        android:layout_width="210dp"
+        android:layout_height="150dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:background="@drawable/frame"
         android:gravity="center_horizontal"
+        android:paddingTop="20dp"
         android:text="@string/デスソース"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@+id/menu_waku"
@@ -289,32 +309,32 @@
 
     <Button
         android:id="@+id/デスソースA"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/プラス"
-        app:layout_constraintBottom_toBottomOf="@+id/デスソース"
-        app:layout_constraintStart_toStartOf="@+id/デスソース" />
-
-    <Button
-        android:id="@+id/デスソースB"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/マイナス"
-        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:text="@string/プラス"
         app:layout_constraintBottom_toBottomOf="@+id/デスソース"
         app:layout_constraintEnd_toEndOf="@+id/デスソース" />
 
+    <Button
+        android:id="@+id/デスソースB"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/マイナス"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/デスソース"
+        app:layout_constraintStart_toStartOf="@+id/デスソース" />
+
     <TextView
         android:id="@+id/デスソース個数"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
         android:gravity="center"
         android:text="@string/デスソース個数"
         android:textSize="30sp"
@@ -324,13 +344,14 @@
 
     <TextView
         android:id="@+id/はちみつ"
-        android:layout_width="180dp"
-        android:layout_height="120dp"
+        android:layout_width="210dp"
+        android:layout_height="150dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:background="@drawable/frame"
         android:gravity="center_horizontal"
+        android:paddingTop="20dp"
         android:text="@string/はちみつ"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@+id/menu_waku"
@@ -338,32 +359,32 @@
 
     <Button
         android:id="@+id/はちみつA"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/プラス"
-        app:layout_constraintBottom_toBottomOf="@+id/はちみつ"
-        app:layout_constraintStart_toStartOf="@+id/はちみつ" />
-
-    <Button
-        android:id="@+id/はちみつB"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/マイナス"
-        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:text="@string/プラス"
         app:layout_constraintBottom_toBottomOf="@+id/はちみつ"
         app:layout_constraintEnd_toEndOf="@+id/はちみつ" />
 
+    <Button
+        android:id="@+id/はちみつB"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/マイナス"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/はちみつ"
+        app:layout_constraintStart_toStartOf="@+id/はちみつ" />
+
     <TextView
         android:id="@+id/はちみつ個数"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
         android:gravity="center"
         android:text="@string/はちみつ個数"
         android:textSize="30sp"
@@ -371,19 +392,33 @@
         app:layout_constraintEnd_toEndOf="@+id/はちみつ"
         app:layout_constraintStart_toStartOf="@+id/はちみつ" />
 
-    <Button
-        android:id="@+id/reset"
-        android:layout_width="223dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
-        android:background="@drawable/frame"
-        android:text="@string/リセット"
-        android:textAllCaps="true"
-        android:textColor="#E91E63"
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/switch_bg"
+        android:showText="false"
+        android:theme="@style/CustomSwitch"
+        android:thumb="@drawable/switch_thumb"
+        android:track="@drawable/switch_bg"
+        app:layout_constraintBottom_toTopOf="@+id/menu_waku"
+        app:layout_constraintStart_toEndOf="@+id/pcice_waku" />
+
+    <TextView
+        android:id="@+id/セール"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="@string/セール"
+        android:textIsSelectable="false"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/menu_waku"
-        app:layout_constraintTop_toBottomOf="@+id/はちみつ" />
+        app:layout_constraintBottom_toTopOf="@+id/switch1"
+        app:layout_constraintEnd_toEndOf="@+id/switch1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/switch1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
