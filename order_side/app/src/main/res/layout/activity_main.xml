@@ -19,7 +19,7 @@
         android:gravity="center|end"
         android:text="@string/empty"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/menu_waku"
+        app:layout_constraintBottom_toTopOf="@+id/main_waku"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
@@ -48,7 +48,7 @@
         app:layout_constraintTop_toTopOf="@+id/pcice_waku" />
 
     <TextView
-        android:id="@+id/menu_waku"
+        android:id="@+id/main_waku"
         android:layout_width="531dp"
         android:layout_height="670dp"
         android:layout_marginBottom="32dp"
@@ -65,31 +65,31 @@
         android:layout_height="0dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/frame"
         android:text="@string/ok"
         android:textAllCaps="true"
         android:textColor="#1E40E9"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/menu_waku"
-        app:layout_constraintTop_toBottomOf="@+id/明太" />
+        app:layout_constraintBottom_toBottomOf="@+id/main_waku"
+        app:layout_constraintStart_toStartOf="@+id/main_waku" />
 
     <Button
-        android:id="@+id/reset"
+        android:id="@+id/cancel"
         android:layout_width="210dp"
         android:layout_height="0dp"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/frame"
         android:text="@string/リセット"
         android:textAllCaps="true"
         android:textColor="#E91E63"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/menu_waku"
-        app:layout_constraintTop_toBottomOf="@+id/はちみつ" />
+        app:layout_constraintBottom_toBottomOf="@+id/main_waku"
+        app:layout_constraintEnd_toEndOf="@+id/main_waku" />
 
     <TextView
         android:id="@+id/プレーン"
@@ -104,8 +104,8 @@
         android:text="@string/プレーン"
         android:textIsSelectable="false"
         android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="@+id/menu_waku"
-        app:layout_constraintTop_toTopOf="@+id/menu_waku" />
+        app:layout_constraintStart_toStartOf="@+id/main_waku"
+        app:layout_constraintTop_toTopOf="@+id/main_waku" />
 
     <Button
         android:id="@+id/プレーンA"
@@ -154,7 +154,7 @@
         android:paddingTop="20dp"
         android:text="@string/しょうゆ"
         android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="@+id/menu_waku"
+        app:layout_constraintStart_toStartOf="@+id/main_waku"
         app:layout_constraintTop_toBottomOf="@id/プレーン" />
 
     <Button
@@ -204,7 +204,7 @@
         android:paddingTop="20dp"
         android:text="@string/明太"
         android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="@+id/menu_waku"
+        app:layout_constraintStart_toStartOf="@+id/main_waku"
         app:layout_constraintTop_toBottomOf="@+id/しょうゆ" />
 
     <Button
@@ -254,8 +254,8 @@
         android:paddingTop="20dp"
         android:text="@string/ピザ"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@+id/menu_waku"
-        app:layout_constraintTop_toTopOf="@+id/menu_waku" />
+        app:layout_constraintEnd_toEndOf="@+id/main_waku"
+        app:layout_constraintTop_toTopOf="@+id/main_waku" />
 
     <Button
         android:id="@+id/ピザA"
@@ -304,7 +304,7 @@
         android:paddingTop="20dp"
         android:text="@string/デスソース"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@+id/menu_waku"
+        app:layout_constraintEnd_toEndOf="@+id/main_waku"
         app:layout_constraintTop_toBottomOf="@+id/ピザ" />
 
     <Button
@@ -354,7 +354,7 @@
         android:paddingTop="20dp"
         android:text="@string/はちみつ"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@+id/menu_waku"
+        app:layout_constraintEnd_toEndOf="@+id/main_waku"
         app:layout_constraintTop_toBottomOf="@+id/デスソース" />
 
     <Button
@@ -392,33 +392,27 @@
         app:layout_constraintEnd_toEndOf="@+id/はちみつ"
         app:layout_constraintStart_toStartOf="@+id/はちみつ" />
 
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/switch_bg"
-        android:showText="false"
-        android:theme="@style/CustomSwitch"
-        android:thumb="@drawable/switch_thumb"
-        android:track="@drawable/switch_bg"
-        app:layout_constraintBottom_toTopOf="@+id/menu_waku"
-        app:layout_constraintStart_toEndOf="@+id/pcice_waku" />
-
     <TextView
         android:id="@+id/セール"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
         android:text="@string/セール"
         android:textIsSelectable="false"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/switch1"
-        app:layout_constraintEnd_toEndOf="@+id/switch1"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/switch1" />
+        app:layout_constraintBottom_toTopOf="@+id/セールボタン"
+        app:layout_constraintEnd_toEndOf="@+id/セールボタン"
+        app:layout_constraintStart_toStartOf="@+id/セールボタン" />
+
+    <ToggleButton
+        android:id="@+id/セールボタン"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/セール"
+        app:layout_constraintBottom_toTopOf="@+id/main_waku"
+        app:layout_constraintStart_toEndOf="@+id/yen" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

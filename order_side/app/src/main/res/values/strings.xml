@@ -24,5 +24,7 @@
     <string name="マイナス">-</string>
     <string name="リセット">Reset</string>
 
+    <string name="キャンセル">CANCEL</string>
+
 
 </resources>

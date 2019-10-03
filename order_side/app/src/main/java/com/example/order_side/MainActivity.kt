@@ -1,10 +1,12 @@
 package com.example.order_side
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Switch
 import android.widget.TextView
+import android.widget.ToggleButton
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         val honeyB = findViewById<Button>(R.id.はちみつB)
 
         //リセットボタン
-        val reset = findViewById<Button>(R.id.reset)
+        val reset = findViewById<Button>(R.id.cancel)
 
         //芋の個数
         var planeNum = 0
@@ -47,19 +49,21 @@ class MainActivity : AppCompatActivity() {
         var honeyNum = 0
 
         //セール状態か否か　1なら通常　-1はセール
-        var mode = 1
+        var mode = 0
 
-        fun cal(
-            plane: Int,
-            soy: Int,
-            men: Int,
-            pizza: Int,
-            death: Int,
-            honey: Int,
-            mode: Int
-        ): Int {
-            var result =
-                plane * 200 + soy * 200 + men * 200 + pizza * 250 + death * 300 + honey * 200
+        //セールボタン
+        val sale: ToggleButton = findViewById(R.id.セールボタン)
+        sale.setOnCheckedChangeListener { _, isChecked ->
+            mode = if (isChecked) {
+                -1
+            } else {
+                1
+            }
+        }
+
+        //金額の計算
+        fun cal(plane: Int, soy: Int, men: Int, pizza: Int, death: Int, honey: Int, mode: Int): Int {
+            var result = plane * 200 + soy * 200 + men * 200 + pizza * 250 + death * 300 + honey * 200
             var sum = plane + soy + men + pizza + death + honey
 
             if (sum >= 2)
@@ -75,93 +79,75 @@ class MainActivity : AppCompatActivity() {
         planeA.setOnClickListener {
             planeNum++
             plane.text = planeNum.toString()
-            price.text =
-                cal(planeNum, soyNum, menNum, pizzaNum, deathNum, honeyNum, mode).toString()
+            price.text = cal(planeNum, soyNum, menNum, pizzaNum, deathNum, honeyNum, mode).toString()
         }
         planeB.setOnClickListener {
             if (planeNum > 0) {
                 planeNum--
                 plane.text = planeNum.toString()
-                price.text =
-                    cal(planeNum, soyNum, menNum, pizzaNum, deathNum, honeyNum, mode).toString()
+                price.text = cal(planeNum, soyNum, menNum, pizzaNum, deathNum, honeyNum, mode).toString()
             }
         }
-
         soyA.setOnClickListener {
             soyNum++
             soy.text = soyNum.toString()
-            price.text =
-                cal(planeNum, soyNum, menNum, pizzaNum, deathNum, honeyNum, mode).toString()
+            price.text = cal(planeNum, soyNum, menNum, pizzaNum, deathNum, honeyNum, mode).toString()
         }
         soyB.setOnClickListener {
             if (soyNum > 0) {
                 soyNum--
                 soy.text = soyNum.toString()
-                price.text =
-                    cal(planeNum, soyNum, menNum, pizzaNum, deathNum, honeyNum, mode).toString()
+                price.text = cal(planeNum, soyNum, menNum, pizzaNum, deathNum, honeyNum, mode).toString()
             }
         }
-
         menA.setOnClickListener {
             menNum++
             men.text = menNum.toString()
-            price.text =
-                cal(planeNum, soyNum, menNum, pizzaNum, deathNum, honeyNum, mode).toString()
+            price.text = cal(planeNum, soyNum, menNum, pizzaNum, deathNum, honeyNum, mode).toString()
         }
         menB.setOnClickListener {
             if (menNum > 0) {
                 menNum--
                 men.text = menNum.toString()
-                price.text =
-                    cal(planeNum, soyNum, menNum, pizzaNum, deathNum, honeyNum, mode).toString()
+                price.text = cal(planeNum, soyNum, menNum, pizzaNum, deathNum, honeyNum, mode).toString()
             }
         }
-
         deathA.setOnClickListener {
             deathNum++
             death.text = deathNum.toString()
-            price.text =
-                cal(planeNum, soyNum, menNum, pizzaNum, deathNum, honeyNum, mode).toString()
+            price.text = cal(planeNum, soyNum, menNum, pizzaNum, deathNum, honeyNum, mode).toString()
         }
         deathB.setOnClickListener {
             if (deathNum > 0) {
                 deathNum--
                 death.text = deathNum.toString()
-                price.text =
-                    cal(planeNum, soyNum, menNum, pizzaNum, deathNum, honeyNum, mode).toString()
+                price.text = cal(planeNum, soyNum, menNum, pizzaNum, deathNum, honeyNum, mode).toString()
             }
         }
-
         pizzaA.setOnClickListener {
             pizzaNum++
             pizza.text = pizzaNum.toString()
-            price.text =
-                cal(planeNum, soyNum, menNum, pizzaNum, deathNum, honeyNum, mode).toString()
+            price.text = cal(planeNum, soyNum, menNum, pizzaNum, deathNum, honeyNum, mode).toString()
         }
         pizzaB.setOnClickListener {
             if (pizzaNum > 0) {
                 pizzaNum--
                 pizza.text = pizzaNum.toString()
-                price.text =
-                    cal(planeNum, soyNum, menNum, pizzaNum, deathNum, honeyNum, mode).toString()
+                price.text = cal(planeNum, soyNum, menNum, pizzaNum, deathNum, honeyNum, mode).toString()
             }
         }
-
         honeyA.setOnClickListener {
             honeyNum++
             honey.text = honeyNum.toString()
-            price.text =
-                cal(planeNum, soyNum, menNum, pizzaNum, deathNum, honeyNum, mode).toString()
+            price.text = cal(planeNum, soyNum, menNum, pizzaNum, deathNum, honeyNum, mode).toString()
         }
         honeyB.setOnClickListener {
             if (honeyNum > 0) {
                 honeyNum--
                 honey.text = honeyNum.toString()
-                price.text =
-                    cal(planeNum, soyNum, menNum, pizzaNum, deathNum, honeyNum, mode).toString()
+                price.text = cal(planeNum, soyNum, menNum, pizzaNum, deathNum, honeyNum, mode).toString()
             }
         }
-
         reset.setOnClickListener{
             planeNum = 0
             soyNum = 0
@@ -176,6 +162,12 @@ class MainActivity : AppCompatActivity() {
             death.text = deathNum.toString()
             honey.text = honeyNum.toString()
             price.text = 0.toString()
+        }
+
+        ok.setOnClickListener{
+            val intent = Intent(this, CalActivity::class.java)
+            intent.putExtra("PRICE",cal(planeNum, soyNum, menNum, pizzaNum, deathNum, honeyNum, mode).toString())
+            startActivity(intent)
         }
     }
 }

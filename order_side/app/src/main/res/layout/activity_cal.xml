@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalActivity">
+
+    <TextView
+        android:id="@+id/main_waku"
+        android:layout_width="531dp"
+        android:layout_height="670dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/frame"
+        android:text="@string/empty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/price_waku"
+        android:layout_width="271dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/frame"
+        android:gravity="center|end"
+        android:text="@string/empty"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/main_waku"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="206dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:gravity="center|end"
+        android:text="@string/price"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/price_waku"
+        app:layout_constraintStart_toStartOf="@+id/price_waku"
+        app:layout_constraintTop_toTopOf="@+id/price_waku" />
+
+    <TextView
+        android:id="@+id/yen"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:gravity="center"
+        android:text="@string/yen"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/price_waku"
+        app:layout_constraintTop_toTopOf="@+id/price_waku" />
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="210dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/frame"
+        android:text="@string/ok"
+        android:textAllCaps="true"
+        android:textColor="#1E40E9"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/main_waku"
+        app:layout_constraintStart_toStartOf="@+id/main_waku" />
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="210dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/frame"
+        android:text="@string/キャンセル"
+        android:textAllCaps="true"
+        android:textColor="#E91E63"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/main_waku"
+        app:layout_constraintEnd_toEndOf="@+id/main_waku" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
