@@ -1,12 +1,12 @@
 package com.example.order_side
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.ToggleButton
 import kotlinx.android.synthetic.main.activity_main.*
+import java.io.Serializable
 
 class MainActivity : AppCompatActivity() {
 
@@ -165,9 +165,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         ok.setOnClickListener{
-            val intent = Intent(this, CalActivity::class.java)
-            intent.putExtra("PRICE",cal(planeNum, soyNum, menNum, pizzaNum, deathNum, honeyNum, mode).toString())
-            startActivity(intent)
         }
     }
 }
