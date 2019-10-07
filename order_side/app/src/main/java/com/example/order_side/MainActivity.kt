@@ -49,10 +49,6 @@ class MainActivity : AppCompatActivity() {
         val popupFlame = findViewById<TextView>(R.id.popup_price_waku)
         val popupYen = findViewById<TextView>(R.id.popup_yen)
         val popupPrice = findViewById<TextView>(R.id.popup_price)
-
-        var inputPrice = 0
-        var outputCharge = 0
-
         listOf<TextView>(flame, popupOk, popupCancel, popupFlame, popupPrice, popupYen).forEach{
             it.visibility = GONE
         }
@@ -71,7 +67,6 @@ class MainActivity : AppCompatActivity() {
         val button00 = findViewById<Button>(R.id.hundred)
         val just = findViewById<Button>(R.id.just)
         val clear = findViewById<Button>(R.id.clear)
-
         listOf<Button>(button0, button1, button2, button3, button4, button5, button6, button7, button8, button9, button00, just, clear).forEach {
             it.visibility = GONE
         }
@@ -80,11 +75,14 @@ class MainActivity : AppCompatActivity() {
         val chargeFlame = findViewById<TextView>(R.id.chargeFlame)
         val charge = findViewById<TextView>(R.id.charge)
         val changeOk = findViewById<Button>(R.id.chargeOk)
-
         listOf<TextView>(chargeFlame, charge).forEach{
             it.visibility = GONE
         }
         changeOk.visibility = GONE
+
+        //お釣りの計算用
+        var inputPrice = 0
+        var outputCharge = 0
 
         //芋の個数
         var planeNum = 0
@@ -120,25 +118,48 @@ class MainActivity : AppCompatActivity() {
         }
 
         //ボタン等の表示切替
-        fun invState() = if (flame.visibility == GONE){
-            listOf<TextView>(flame, popupOk, popupCancel, popupFlame, popupPrice, popupYen).forEach{
-                it.visibility = VISIBLE
+        fun buttonSwitch(){
+            if (planeA.visibility == VISIBLE){
+                listOf<Button>(planeA, planeB, soyA, soyB, menA, menB, pizzaA, pizzaB, deathA, deathB, honeyA, honeyB).forEach{
+                    it.visibility = GONE
+                }
+            }else {
+                listOf<Button>(planeA, planeB, soyA, soyB, menA, menB, pizzaA, pizzaB, deathA, deathB, honeyA, honeyB).forEach {
+                    it.visibility = VISIBLE
+                }
             }
-            listOf<Button>(button0, button1, button2, button3, button4, button5, button6, button7, button8, button9, button00, just, clear).forEach {
-                it.visibility = VISIBLE
+        }
+
+        fun popupSwitch(){
+            if(flame.visibility == GONE){
+                listOf<TextView>(flame, popupOk, popupCancel, popupFlame, popupPrice, popupYen).forEach{
+                    it.visibility = VISIBLE
+                }
+                listOf<Button>(button0, button1, button2, button3, button4, button5, button6, button7, button8, button9, button00, just, clear).forEach {
+                    it.visibility = VISIBLE
+                }
+            }else{
+                listOf<TextView>(flame, popupOk, popupCancel, popupFlame, popupPrice, popupYen).forEach{
+                    it.visibility = GONE
+                }
+                listOf<Button>(button0, button1, button2, button3, button4, button5, button6, button7, button8, button9, button00, just, clear).forEach {
+                    it.visibility = GONE
+                }
             }
-            listOf<Button>(planeA, planeB, soyA, soyB, menA, menB, pizzaA, pizzaB, deathA, deathB, honeyA, honeyB).forEach{
-                it.visibility = GONE
-            }
-        }else{
-            listOf<TextView>(flame, popupOk, popupCancel, popupFlame, popupPrice, popupYen).forEach{
-                it.visibility = GONE
-            }
-            listOf<Button>(button0, button1, button2, button3, button4, button5, button6, button7, button8, button9, button00, just, clear).forEach {
-                it.visibility = GONE
-            }
-            listOf<Button>(planeA, planeB, soyA, soyB, menA, menB, pizzaA, pizzaB, deathA, deathB, honeyA, honeyB).forEach {
-                it.visibility = VISIBLE
+        }
+
+        //お釣り画面の表示切替
+        fun chargeSwitch(){
+            if(chargeFlame.visibility == GONE) {
+                listOf<TextView>(chargeFlame, charge).forEach {
+                    it.visibility = VISIBLE
+                }
+                changeOk.visibility = VISIBLE
+            }else{
+                listOf<TextView>(chargeFlame, charge).forEach{
+                    it.visibility = GONE
+                }
+                changeOk.visibility = GONE
             }
         }
 
@@ -248,33 +269,32 @@ class MainActivity : AppCompatActivity() {
 
         //注文画面のOKボタン
         ok.setOnClickListener{
-            invState()
+            buttonSwitch()
+            popupSwitch()
         }
 
         //ポップアップ画面のCancelボタン
         popupCancel.setOnClickListener{
             popupReset()
-            invState()
+            popupSwitch()
+            buttonSwitch()
         }
 
         //ポップアップ画面のOKボタン
         popupOk.setOnClickListener {
-            if(outputCharge > 0){
-                listOf<TextView>(flame, popupOk, popupCancel, popupFlame, popupPrice, popupYen).forEach{
-                    it.visibility = GONE
+            when {
+                outputCharge > 0 -> {
+                    popupSwitch()
+                    chargeSwitch()
                 }
-                listOf<Button>(button0, button1, button2, button3, button4, button5, button6, button7, button8, button9, button00, just, clear).forEach {
-                    it.visibility = GONE
+                outputCharge == 0 -> {
+                    popupReset()
+                    popupSwitch()
+                    buttonSwitch()
+                    zeroClear()
                 }
-                listOf<TextView>(chargeFlame, charge).forEach{
-                    it.visibility = VISIBLE
+                else -> {
                 }
-                changeOk.visibility = VISIBLE
-            }
-            else{
-                popupReset()
-                invState()
-                zeroClear()
             }
         }
 
@@ -306,14 +326,8 @@ class MainActivity : AppCompatActivity() {
 
         //おつり画面のOKボタン
         changeOk.setOnClickListener {
-            listOf<Button>(planeA, planeB, soyA, soyB, menA, menB, pizzaA, pizzaB, deathA, deathB, honeyA, honeyB).forEach {
-                it.visibility = VISIBLE
-            }
-            listOf<TextView>(chargeFlame, charge).forEach{
-                it.visibility = GONE
-            }
-            changeOk.visibility = GONE
-
+            buttonSwitch()
+            chargeSwitch()
             popupReset()
             zeroClear()
         }
