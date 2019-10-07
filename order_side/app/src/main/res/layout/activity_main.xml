@@ -84,8 +84,8 @@
         android:id="@+id/ok"
         android:layout_width="210dp"
         android:layout_height="0dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/frame"
         android:text="@string/ok"
@@ -94,14 +94,14 @@
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/main_waku"
-        app:layout_constraintStart_toStartOf="@+id/main_waku" />
+        app:layout_constraintEnd_toEndOf="@+id/main_waku" />
 
     <Button
         android:id="@+id/cancel"
         android:layout_width="210dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/frame"
         android:text="@string/リセット"
@@ -110,7 +110,7 @@
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/main_waku"
-        app:layout_constraintEnd_toEndOf="@+id/main_waku" />
+        app:layout_constraintStart_toStartOf="@+id/main_waku" />
 
     <TextView
         android:id="@+id/プレーン"
@@ -634,8 +634,8 @@
         android:id="@+id/popup_ok"
         android:layout_width="136dp"
         android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/frame"
         android:gravity="center"
@@ -644,14 +644,14 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/popup_waku"
-        app:layout_constraintStart_toStartOf="@+id/popup_waku" />
+        app:layout_constraintEnd_toEndOf="@+id/popup_waku" />
 
     <Button
         android:id="@+id/popup_cancel"
         android:layout_width="136dp"
         android:layout_height="40dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/frame"
         android:gravity="center"
@@ -660,7 +660,7 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/popup_waku"
-        app:layout_constraintEnd_toEndOf="@+id/popup_waku" />
+        app:layout_constraintStart_toStartOf="@+id/popup_waku" />
 
     <TextView
         android:id="@+id/chargeFlame"
