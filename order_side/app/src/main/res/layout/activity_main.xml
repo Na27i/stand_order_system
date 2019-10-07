@@ -11,7 +11,7 @@
 
 
     <TextView
-        android:id="@+id/pcice_waku"
+        android:id="@+id/price_waku"
         android:layout_width="271dp"
         android:layout_height="65dp"
         android:layout_marginBottom="32dp"
@@ -33,9 +33,9 @@
         android:gravity="center|end"
         android:text="@string/price"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@+id/pcice_waku"
-        app:layout_constraintStart_toStartOf="@+id/pcice_waku"
-        app:layout_constraintTop_toTopOf="@+id/pcice_waku" />
+        app:layout_constraintBottom_toBottomOf="@+id/price_waku"
+        app:layout_constraintStart_toStartOf="@+id/price_waku"
+        app:layout_constraintTop_toTopOf="@+id/price_waku" />
 
     <TextView
         android:id="@+id/yen"
@@ -44,8 +44,8 @@
         android:gravity="center"
         android:text="@string/yen"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@+id/pcice_waku"
-        app:layout_constraintTop_toTopOf="@+id/pcice_waku" />
+        app:layout_constraintEnd_toEndOf="@+id/price_waku"
+        app:layout_constraintTop_toTopOf="@+id/price_waku" />
 
     <TextView
         android:id="@+id/main_waku"
@@ -414,5 +414,264 @@
         android:text="@string/セール"
         app:layout_constraintBottom_toTopOf="@+id/main_waku"
         app:layout_constraintStart_toEndOf="@+id/yen" />
+
+    <TextView
+        android:id="@+id/popup_waku"
+        android:layout_width="320dp"
+        android:layout_height="461dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/frame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/price_waku" />
+
+    <Button
+        android:id="@+id/zero"
+        android:layout_width="136dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/zero"
+        app:layout_constraintStart_toStartOf="@+id/popup_waku"
+        app:layout_constraintTop_toBottomOf="@+id/one" />
+
+    <Button
+        android:id="@+id/one"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/one"
+        app:layout_constraintStart_toStartOf="@+id/popup_waku"
+        app:layout_constraintTop_toBottomOf="@+id/four" />
+
+    <Button
+        android:id="@+id/two"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/two"
+        app:layout_constraintStart_toEndOf="@+id/one"
+        app:layout_constraintTop_toBottomOf="@+id/four" />
+
+    <Button
+        android:id="@+id/three"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/three"
+        app:layout_constraintStart_toEndOf="@+id/two"
+        app:layout_constraintTop_toBottomOf="@+id/six" />
+
+    <Button
+        android:id="@+id/four"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/four"
+        app:layout_constraintStart_toStartOf="@+id/popup_waku"
+        app:layout_constraintTop_toBottomOf="@+id/seven" />
+
+    <Button
+        android:id="@+id/five"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/five"
+        app:layout_constraintStart_toEndOf="@+id/four"
+        app:layout_constraintTop_toBottomOf="@+id/eight" />
+
+    <Button
+        android:id="@+id/six"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/six"
+        app:layout_constraintStart_toEndOf="@+id/five"
+        app:layout_constraintTop_toBottomOf="@+id/nine" />
+
+    <Button
+        android:id="@+id/seven"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/seven"
+        app:layout_constraintStart_toStartOf="@+id/popup_waku"
+        app:layout_constraintTop_toBottomOf="@+id/popup_price_waku" />
+
+    <Button
+        android:id="@+id/eight"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/eight"
+        app:layout_constraintStart_toEndOf="@+id/seven"
+        app:layout_constraintTop_toBottomOf="@+id/popup_price_waku" />
+
+    <Button
+        android:id="@+id/nine"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/nine"
+        app:layout_constraintStart_toEndOf="@+id/eight"
+        app:layout_constraintTop_toBottomOf="@+id/popup_price_waku" />
+
+    <Button
+        android:id="@+id/hundred"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/hundred"
+        app:layout_constraintStart_toEndOf="@+id/zero"
+        app:layout_constraintTop_toBottomOf="@+id/three" />
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/clear"
+        app:layout_constraintStart_toEndOf="@+id/nine"
+        app:layout_constraintTop_toBottomOf="@+id/popup_price_waku" />
+
+    <Button
+        android:id="@+id/just"
+        android:layout_width="60dp"
+        android:layout_height="136dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/just"
+        app:layout_constraintStart_toEndOf="@+id/six"
+        app:layout_constraintTop_toBottomOf="@+id/clear" />
+
+    <TextView
+        android:id="@+id/popup_price_waku"
+        android:layout_width="271dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/frame"
+        android:gravity="center|end"
+        android:text="@string/empty"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/popup_waku" />
+
+    <TextView
+        android:id="@+id/popup_price"
+        android:layout_width="206dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:gravity="center|end"
+        android:text="@string/price"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/popup_price_waku"
+        app:layout_constraintStart_toStartOf="@+id/popup_price_waku"
+        app:layout_constraintTop_toTopOf="@+id/popup_price_waku" />
+
+    <TextView
+        android:id="@+id/popup_yen"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:gravity="center"
+        android:text="@string/yen"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/popup_price_waku"
+        app:layout_constraintTop_toTopOf="@+id/popup_price_waku" />
+
+    <Button
+        android:id="@+id/popup_ok"
+        android:layout_width="136dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/frame"
+        android:gravity="center"
+        android:text="@string/ok"
+        android:textColor="#1E40E9"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/popup_waku"
+        app:layout_constraintStart_toStartOf="@+id/popup_waku" />
+
+    <Button
+        android:id="@+id/popup_cancel"
+        android:layout_width="136dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/frame"
+        android:gravity="center"
+        android:text="@android:string/cancel"
+        android:textColor="#E91E63"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/popup_waku"
+        app:layout_constraintEnd_toEndOf="@+id/popup_waku" />
+
+    <TextView
+        android:id="@+id/chargeFlame"
+        android:layout_width="320dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/frame"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/charge"
+        android:textIsSelectable="false"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/popup_price_waku" />
+
+    <TextView
+        android:id="@+id/charge"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/price"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/chargeFlame"
+        app:layout_constraintStart_toStartOf="@+id/chargeFlame"
+        app:layout_constraintTop_toTopOf="@+id/chargeFlame" />
+
+    <Button
+        android:id="@+id/chargeOk"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/ok"
+        app:layout_constraintBottom_toBottomOf="@+id/chargeFlame"
+        app:layout_constraintEnd_toEndOf="@+id/ピザ個数"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@+id/chargeFlame" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
