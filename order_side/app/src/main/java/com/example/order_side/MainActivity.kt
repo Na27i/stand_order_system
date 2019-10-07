@@ -103,6 +103,20 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        //クーポンに関する部分　1なら通常　-1は適用
+        //ここは後で実装
+        /*var coupon = 0
+        val couponNow: ToggleButton = findViewById(R.id.クーポンボタン)
+        couponNow.setOnCheckedChangeListener { _, isChecked ->
+            mode = if (isChecked) {
+                -1
+            } else {
+                1
+            }
+        }
+        */
+
+
         //金額の計算
         fun cal(plane: Int, soy: Int, men: Int, pizza: Int, death: Int, honey: Int, mode: Int): Int {
             var result = plane * 200 + soy * 200 + men * 200 + pizza * 250 + death * 300 + honey * 200

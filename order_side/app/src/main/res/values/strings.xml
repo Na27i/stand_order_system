@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">注文管理</string>
     <string name="セール">セール</string>
+    <string name="クーポン">クーポン</string>
     <string name="price">0</string>
     <string name="ok">OK</string>
     <string name="empty"></string>
