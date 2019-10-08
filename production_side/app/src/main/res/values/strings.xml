@@ -10,6 +10,11 @@
 
     <string name="全体">現在の注文一覧</string>
     <string name="種類">種類別注文一覧</string>
-    <string name="待ち">個の注文待ち</string>
+    <string name="待ち">件の非表示注文</string>
+    <string name="number">整理番号</string>
+
+    <string name="zero">0</string>
+    <string name="test">12345</string>
+    <string name="ok">OK</string>
 
 </resources>
