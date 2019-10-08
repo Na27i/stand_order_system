@@ -1,12 +1,15 @@
 <resources>
     <string name="app_name">stand_order_system</string>
-    <string name="plus">+</string>
-    <string name="minus">-</string>
+
     <string name="プレーン">プレーン</string>
     <string name="しょうゆ">しょうゆ</string>
     <string name="明太">明太</string>
     <string name="ピザ">ピザ</string>
     <string name="デスソース">デスソース</string>
     <string name="はちみつ">はちみつ</string>
+
+    <string name="全体">現在の注文一覧</string>
+    <string name="種類">種類別注文一覧</string>
+    <string name="待ち">個の注文待ち</string>
 
 </resources>
