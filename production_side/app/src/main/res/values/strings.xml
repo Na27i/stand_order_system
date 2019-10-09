@@ -14,7 +14,13 @@
     <string name="number">整理番号</string>
 
     <string name="zero">0</string>
-    <string name="test">12345</string>
+    <string name="test0">11111</string>
+    <string name="test1">22222</string>
+    <string name="test2">33333</string>
+    <string name="test3">44444</string>
+    <string name="test4">55555</string>
+    <string name="test5">66666</string>
+
     <string name="ok">OK</string>
 
 </resources>
