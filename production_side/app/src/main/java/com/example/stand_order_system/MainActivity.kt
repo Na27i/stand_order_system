@@ -6,7 +6,8 @@ import android.widget.TextView
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.widget.Button
-
+import com.example.stand_order_system.models.OrderModel
+import com.example.stand_order_system.strage.DBHelper
 
 class MainActivity : AppCompatActivity() {
 
@@ -81,55 +82,164 @@ class MainActivity : AppCompatActivity() {
         val wait5del = findViewById<Button>(R.id.wait5del)
 
         //表示する関数
-        fun dspWaits(number: Int){
-            when(number){
+        fun dspWaits(number: Int) {
+            when (number) {
                 0 -> {
-                    listOf<TextView>(wait0, wait0A, wait0B, wait0C, wait0D, wait0E, wait0F, wait0num).forEach{ it.visibility = VISIBLE }
-                    wait0del.visibility = VISIBLE }
+                    listOf<TextView>(
+                        wait0,
+                        wait0A,
+                        wait0B,
+                        wait0C,
+                        wait0D,
+                        wait0E,
+                        wait0F,
+                        wait0num
+                    ).forEach { it.visibility = VISIBLE }
+                    wait0del.visibility = VISIBLE
+                }
                 1 -> {
-                    listOf<TextView>(wait1, wait1A, wait1B, wait1C, wait1D, wait1E, wait1F, wait1num).forEach{ it.visibility = VISIBLE }
-                    wait1del.visibility = VISIBLE }
+                    listOf<TextView>(wait1, wait1A, wait1B, wait1C, wait1D, wait1E, wait1F, wait1num).forEach { it.visibility = VISIBLE }
+                    wait1del.visibility = VISIBLE
+                }
                 2 -> {
-                    listOf<TextView>(wait2, wait2A, wait2B, wait2C, wait2D, wait2E, wait2F, wait2num).forEach{ it.visibility = VISIBLE }
-                    wait2del.visibility = VISIBLE }
+                    listOf<TextView>(wait2, wait2A, wait2B, wait2C, wait2D, wait2E, wait2F, wait2num).forEach { it.visibility = VISIBLE }
+                    wait2del.visibility = VISIBLE
+                }
                 3 -> {
-                    listOf<TextView>(wait3, wait3A, wait3B, wait3C, wait3D, wait3E, wait3F, wait3num).forEach{ it.visibility = VISIBLE }
-                    wait3del.visibility = VISIBLE }
+                    listOf<TextView>(
+                        wait3,
+                        wait3A,
+                        wait3B,
+                        wait3C,
+                        wait3D,
+                        wait3E,
+                        wait3F,
+                        wait3num
+                    ).forEach { it.visibility = VISIBLE }
+                    wait3del.visibility = VISIBLE
+                }
                 4 -> {
-                    listOf<TextView>(wait4, wait4A, wait4B, wait4C, wait4D, wait4E, wait4F, wait4num).forEach{ it.visibility = VISIBLE }
-                    wait4del.visibility = VISIBLE }
+                    listOf<TextView>(
+                        wait4,
+                        wait4A,
+                        wait4B,
+                        wait4C,
+                        wait4D,
+                        wait4E,
+                        wait4F,
+                        wait4num
+                    ).forEach { it.visibility = VISIBLE }
+                    wait4del.visibility = VISIBLE
+                }
                 5 -> {
-                    listOf<TextView>(wait5, wait5A, wait5B, wait5C, wait5D, wait5E, wait5F, wait5num).forEach{ it.visibility = VISIBLE }
-                    wait5del.visibility = VISIBLE }
+                    listOf<TextView>(
+                        wait5,
+                        wait5A,
+                        wait5B,
+                        wait5C,
+                        wait5D,
+                        wait5E,
+                        wait5F,
+                        wait5num
+                    ).forEach { it.visibility = VISIBLE }
+                    wait5del.visibility = VISIBLE
+                }
             }
         }
 
         //非表示にする関数
-        fun hidWaits(number: Int){
-            when(number){
+        fun hidWaits(number: Int) {
+            when (number) {
                 0 -> {
-                    listOf<TextView>(wait0, wait0A, wait0B, wait0C, wait0D, wait0E, wait0F, wait0num).forEach{ it.visibility = GONE }
-                    wait0del.visibility = GONE }
+                    listOf<TextView>(
+                        wait0,
+                        wait0A,
+                        wait0B,
+                        wait0C,
+                        wait0D,
+                        wait0E,
+                        wait0F,
+                        wait0num
+                    ).forEach { it.visibility = GONE }
+                    wait0del.visibility = GONE
+                }
                 1 -> {
-                    listOf<TextView>(wait1, wait1A, wait1B, wait1C, wait1D, wait1E, wait1F, wait1num).forEach{ it.visibility = GONE }
-                    wait1del.visibility = GONE }
+                    listOf<TextView>(
+                        wait1,
+                        wait1A,
+                        wait1B,
+                        wait1C,
+                        wait1D,
+                        wait1E,
+                        wait1F,
+                        wait1num
+                    ).forEach { it.visibility = GONE }
+                    wait1del.visibility = GONE
+                }
                 2 -> {
-                    listOf<TextView>(wait2, wait2A, wait2B, wait2C, wait2D, wait2E, wait2F, wait2num).forEach{ it.visibility = GONE }
-                    wait2del.visibility = GONE }
+                    listOf<TextView>(
+                        wait2,
+                        wait2A,
+                        wait2B,
+                        wait2C,
+                        wait2D,
+                        wait2E,
+                        wait2F,
+                        wait2num
+                    ).forEach { it.visibility = GONE }
+                    wait2del.visibility = GONE
+                }
                 3 -> {
-                    listOf<TextView>(wait3, wait3A, wait3B, wait3C, wait3D, wait3E, wait3F, wait3num).forEach{ it.visibility = GONE }
-                    wait3del.visibility = GONE }
+                    listOf<TextView>(
+                        wait3,
+                        wait3A,
+                        wait3B,
+                        wait3C,
+                        wait3D,
+                        wait3E,
+                        wait3F,
+                        wait3num
+                    ).forEach { it.visibility = GONE }
+                    wait3del.visibility = GONE
+                }
                 4 -> {
-                    listOf<TextView>(wait4, wait4A, wait4B, wait4C, wait4D, wait4E, wait4F, wait4num).forEach{ it.visibility = GONE }
-                    wait4del.visibility = GONE }
+                    listOf<TextView>(
+                        wait4,
+                        wait4A,
+                        wait4B,
+                        wait4C,
+                        wait4D,
+                        wait4E,
+                        wait4F,
+                        wait4num
+                    ).forEach { it.visibility = GONE }
+                    wait4del.visibility = GONE
+                }
                 5 -> {
-                    listOf<TextView>(wait5, wait5A, wait5B, wait5C, wait5D, wait5E, wait5F, wait5num).forEach{ it.visibility = GONE }
-                    wait5del.visibility = GONE }
+                    listOf<TextView>(
+                        wait5,
+                        wait5A,
+                        wait5B,
+                        wait5C,
+                        wait5D,
+                        wait5E,
+                        wait5F,
+                        wait5num
+                    ).forEach { it.visibility = GONE }
+                    wait5del.visibility = GONE
+                }
             }
         }
 
         //OKボタンを押した際の挙動
-        listOf<Button>(wait0del, wait1del, wait2del, wait3del, wait4del, wait5del).forEachIndexed{index, button ->
+        listOf<Button>(
+            wait0del,
+            wait1del,
+            wait2del,
+            wait3del,
+            wait4del,
+            wait5del
+        ).forEachIndexed { index, button ->
             button.setOnClickListener {
                 hidWaits(index)
             }
@@ -138,6 +248,26 @@ class MainActivity : AppCompatActivity() {
         for (index in 0..5)
             dspWaits(index)
 
+        var a = 12345
+        var b = 1
+        var c = 2
+        var d = 3
+        var e = 4
+        var f = 5
+        var g = 6
 
+        // データベース登録のテスト
+        val testButton = findViewById<Button>(R.id.testButton)
+        val orderDBHelper = DBHelper(this)
+        testButton.setOnClickListener {
+            val order = OrderModel(a, b, c, d, e, f, g)
+            val result = orderDBHelper.insertOrder(order)
+
+            if(result) {
+               listOf(a, b, c, d, e, f, g).forEach{
+                   it + 1
+               }
+            }
+        }
     }
 }

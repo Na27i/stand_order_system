@@ -1067,4 +1067,15 @@
         app:layout_constraintStart_toStartOf="@+id/pizzaSum"
         app:layout_constraintTop_toTopOf="@+id/pizzaSum" />
 
+    <Button
+        android:id="@+id/testButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/test"
+        app:layout_constraintEnd_toEndOf="@+id/orderAll"
+        app:layout_constraintTop_toTopOf="@+id/orderAll" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
