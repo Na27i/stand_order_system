@@ -41,7 +41,13 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null
         return true
     }
 
+    fun getNumOrder(): Int{
+        val db = writableDatabase
+        val select = "select * from " + DBContract.OrderEntry.TABLE_NAME
+        val cursor = db.rawQuery(select, null)
 
+        return cursor.count
+    }
 
     companion object {
         const val DATABASE_VERSION = 1

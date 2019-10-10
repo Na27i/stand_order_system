@@ -84,6 +84,9 @@ class MainActivity : AppCompatActivity() {
         val wait5num = findViewById<TextView>(R.id.wait5num)
         val wait5del = findViewById<Button>(R.id.wait5del)
 
+        val nowWait = findViewById<TextView>(R.id.nowWaitNum)
+        nowWait.text = (orderDBHelper.getNumOrder() - 6).toString()
+
         //表示する関数
         fun dspWaits(number: Int) {
             when (number) {
@@ -234,6 +237,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        fun getHiddenOrder(){
+            val hiddenOrder = orderDBHelper.getNumOrder() - 6
+            nowWait.text = hiddenOrder.toString()
+        }
+
         //OKボタンを押した際の挙動
         listOf<Button>(
             wait0del,
@@ -264,12 +272,7 @@ class MainActivity : AppCompatActivity() {
         dbtest.setOnClickListener {
             val order = OrderModel(a, b, c, d, e, f, g)
             val result = orderDBHelper.insertOrder(order)
-
-            if(result) {
-               listOf(a, b, c, d, e, f, g).forEach{
-                   it + 1
-               }
-            }
+            getHiddenOrder()
         }
     }
 }
