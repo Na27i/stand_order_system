@@ -15,6 +15,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val dbtest = findViewById<Button>(R.id.testButton)
+        val orderDBHelper = DBHelper(this)
+
         //予約1列目
         val wait0 = findViewById<TextView>(R.id.wait0)
         val wait0A = findViewById<TextView>(R.id.wait0A)
@@ -248,18 +251,17 @@ class MainActivity : AppCompatActivity() {
         for (index in 0..5)
             dspWaits(index)
 
-        var a = 12345
-        var b = 1
-        var c = 2
-        var d = 3
-        var e = 4
-        var f = 5
-        var g = 6
+        val a = 12345
+        val b = 1
+        val c = 2
+        val d = 3
+        val e = 4
+        val f = 5
+        val g = 6
 
         // データベース登録のテスト
-        val testButton = findViewById<Button>(R.id.testButton)
-        val orderDBHelper = DBHelper(this)
-        testButton.setOnClickListener {
+
+        dbtest.setOnClickListener {
             val order = OrderModel(a, b, c, d, e, f, g)
             val result = orderDBHelper.insertOrder(order)
 
