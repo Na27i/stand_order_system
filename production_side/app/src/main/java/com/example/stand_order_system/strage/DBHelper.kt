@@ -2,9 +2,11 @@ package com.example.stand_order_system.strage
 
 import android.content.ContentValues
 import android.content.Context
+import android.database.Cursor
 import android.database.sqlite.SQLiteConstraintException
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.database.sqlite.SQLiteException
 import com.example.stand_order_system.models.OrderModel
 
 
@@ -39,6 +41,48 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null
         val rowId = db.insert(DBContract.OrderEntry.TABLE_NAME, null, values)
 
         return true
+    }
+
+    fun deleteOrder(number : Int): Boolean{
+        val db = writableDatabase
+        db.delete(DBContract.OrderEntry.TABLE_NAME, "number=?", arrayOf(number.toString()))
+
+        return true
+    }
+
+    fun getOrder(number: Int): ArrayList<OrderModel> {
+        val order = ArrayList<OrderModel>()
+        val db = writableDatabase
+        var cursor: Cursor? = null
+        try {
+            cursor = db.rawQuery("select * from " + DBContract.OrderEntry.TABLE_NAME + " WHERE " + DBContract.OrderEntry.NUMBER + "='" + number + "'", null)
+        } catch (e: SQLiteException) {
+            // if table not yet present, create it
+            db.execSQL(SQL_CREATE_ENTRIES)
+            return ArrayList()
+        }
+
+        var plane: Int
+        var soy: Int
+        var men: Int
+        var pizza: Int
+        var death: Int
+        var honey: Int
+
+        if (cursor!!.moveToFirst()) {
+            while (!cursor.isAfterLast) {
+                plane = cursor.getInt(cursor.getColumnIndex(DBContract.OrderEntry.PLANE_NUM))
+                soy = cursor.getInt(cursor.getColumnIndex(DBContract.OrderEntry.SOY_NUM))
+                men = cursor.getInt(cursor.getColumnIndex(DBContract.OrderEntry.MEN_NUM))
+                pizza = cursor.getInt(cursor.getColumnIndex(DBContract.OrderEntry.MEN_NUM))
+                death = cursor.getInt(cursor.getColumnIndex(DBContract.OrderEntry.MEN_NUM))
+                honey = cursor.getInt(cursor.getColumnIndex(DBContract.OrderEntry.MEN_NUM))
+
+                order.add(OrderModel(number, plane, soy, men, pizza, death, honey))
+                cursor.moveToNext()
+            }
+        }
+        return order
     }
 
     fun getNumOrder(): Int{
