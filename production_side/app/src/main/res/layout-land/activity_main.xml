@@ -143,84 +143,78 @@
         android:id="@+id/wait5A"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/plane_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait5"
-        app:layout_constraintEnd_toStartOf="@+id/wait5B"
+        app:layout_constraintEnd_toEndOf="@+id/titlePlane"
         app:layout_constraintTop_toTopOf="@+id/wait5" />
 
     <TextView
         android:id="@+id/wait5B"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/soy_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait5"
-        app:layout_constraintEnd_toStartOf="@+id/wait5C"
+        app:layout_constraintEnd_toEndOf="@+id/titleSoy"
         app:layout_constraintTop_toTopOf="@+id/wait5" />
 
     <TextView
         android:id="@+id/wait5C"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/men_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait5"
-        app:layout_constraintEnd_toStartOf="@+id/wait5D"
+        app:layout_constraintEnd_toEndOf="@+id/titleMen"
         app:layout_constraintTop_toTopOf="@+id/wait5" />
 
     <TextView
         android:id="@+id/wait5D"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/pizza_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait5"
-        app:layout_constraintEnd_toStartOf="@+id/wait5E"
+        app:layout_constraintEnd_toEndOf="@+id/titlePizza"
         app:layout_constraintTop_toTopOf="@+id/wait5" />
 
     <TextView
         android:id="@+id/wait5E"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/death_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait5"
-        app:layout_constraintEnd_toStartOf="@+id/wait5F"
+        app:layout_constraintEnd_toEndOf="@+id/titleDeath"
         app:layout_constraintTop_toTopOf="@+id/wait5" />
 
     <TextView
         android:id="@+id/wait5F"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
+        android:background="@drawable/honey_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait5"
-        app:layout_constraintEnd_toStartOf="@+id/wait5del"
+        app:layout_constraintEnd_toEndOf="@+id/titleHoney"
         app:layout_constraintTop_toTopOf="@+id/wait5" />
 
     <Button
@@ -263,84 +257,78 @@
         android:id="@+id/wait4A"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/plane_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait4"
-        app:layout_constraintEnd_toStartOf="@+id/wait4B"
+        app:layout_constraintEnd_toEndOf="@+id/titlePlane"
         app:layout_constraintTop_toTopOf="@+id/wait4" />
 
     <TextView
         android:id="@+id/wait4B"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/soy_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait4"
-        app:layout_constraintEnd_toStartOf="@+id/wait4C"
+        app:layout_constraintEnd_toEndOf="@+id/titleSoy"
         app:layout_constraintTop_toTopOf="@+id/wait4" />
 
     <TextView
         android:id="@+id/wait4C"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/men_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait4"
-        app:layout_constraintEnd_toStartOf="@+id/wait4D"
+        app:layout_constraintEnd_toEndOf="@+id/titleMen"
         app:layout_constraintTop_toTopOf="@+id/wait4" />
 
     <TextView
         android:id="@+id/wait4D"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/pizza_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait4"
-        app:layout_constraintEnd_toStartOf="@+id/wait4E"
+        app:layout_constraintEnd_toEndOf="@+id/titlePizza"
         app:layout_constraintTop_toTopOf="@+id/wait4" />
 
     <TextView
         android:id="@+id/wait4E"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/death_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait4"
-        app:layout_constraintEnd_toStartOf="@+id/wait4F"
+        app:layout_constraintEnd_toEndOf="@+id/titleDeath"
         app:layout_constraintTop_toTopOf="@+id/wait4" />
 
     <TextView
         android:id="@+id/wait4F"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
+        android:background="@drawable/honey_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait4"
-        app:layout_constraintEnd_toStartOf="@+id/wait4del"
+        app:layout_constraintEnd_toEndOf="@+id/titleHoney"
         app:layout_constraintTop_toTopOf="@+id/wait4" />
 
     <Button
@@ -383,84 +371,78 @@
         android:id="@+id/wait3A"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/plane_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait3"
-        app:layout_constraintEnd_toStartOf="@+id/wait3B"
+        app:layout_constraintEnd_toEndOf="@+id/titlePlane"
         app:layout_constraintTop_toTopOf="@+id/wait3" />
 
     <TextView
         android:id="@+id/wait3B"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/soy_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait3"
-        app:layout_constraintEnd_toStartOf="@+id/wait3C"
+        app:layout_constraintEnd_toEndOf="@+id/titleSoy"
         app:layout_constraintTop_toTopOf="@+id/wait3" />
 
     <TextView
         android:id="@+id/wait3C"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/men_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait3"
-        app:layout_constraintEnd_toStartOf="@+id/wait3D"
+        app:layout_constraintEnd_toEndOf="@+id/titleMen"
         app:layout_constraintTop_toTopOf="@+id/wait3" />
 
     <TextView
         android:id="@+id/wait3D"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/pizza_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait3"
-        app:layout_constraintEnd_toStartOf="@+id/wait3E"
+        app:layout_constraintEnd_toEndOf="@+id/titlePizza"
         app:layout_constraintTop_toTopOf="@+id/wait3" />
 
     <TextView
         android:id="@+id/wait3E"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/death_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait3"
-        app:layout_constraintEnd_toStartOf="@+id/wait3F"
+        app:layout_constraintEnd_toEndOf="@+id/titleDeath"
         app:layout_constraintTop_toTopOf="@+id/wait3" />
 
     <TextView
         android:id="@+id/wait3F"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
+        android:background="@drawable/honey_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait3"
-        app:layout_constraintEnd_toStartOf="@+id/wait3del"
+        app:layout_constraintEnd_toEndOf="@+id/titleHoney"
         app:layout_constraintTop_toTopOf="@+id/wait3" />
 
     <Button
@@ -504,84 +486,78 @@
         android:id="@+id/wait2A"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/plane_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait2"
-        app:layout_constraintEnd_toStartOf="@+id/wait2B"
+        app:layout_constraintEnd_toEndOf="@+id/titlePlane"
         app:layout_constraintTop_toTopOf="@+id/wait2" />
 
     <TextView
         android:id="@+id/wait2B"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/soy_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait2"
-        app:layout_constraintEnd_toStartOf="@+id/wait2C"
+        app:layout_constraintEnd_toEndOf="@+id/titleSoy"
         app:layout_constraintTop_toTopOf="@+id/wait2" />
 
     <TextView
         android:id="@+id/wait2C"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/men_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait2"
-        app:layout_constraintEnd_toStartOf="@+id/wait2D"
+        app:layout_constraintEnd_toEndOf="@+id/titleMen"
         app:layout_constraintTop_toTopOf="@+id/wait2" />
 
     <TextView
         android:id="@+id/wait2D"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/pizza_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait2"
-        app:layout_constraintEnd_toStartOf="@+id/wait2E"
+        app:layout_constraintEnd_toEndOf="@+id/titlePizza"
         app:layout_constraintTop_toTopOf="@+id/wait2" />
 
     <TextView
         android:id="@+id/wait2E"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/death_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait2"
-        app:layout_constraintEnd_toStartOf="@+id/wait2F"
+        app:layout_constraintEnd_toEndOf="@+id/titleDeath"
         app:layout_constraintTop_toTopOf="@+id/wait2" />
 
     <TextView
         android:id="@+id/wait2F"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
+        android:background="@drawable/honey_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait2"
-        app:layout_constraintEnd_toStartOf="@+id/wait2del"
+        app:layout_constraintEnd_toEndOf="@+id/titleHoney"
         app:layout_constraintTop_toTopOf="@+id/wait2" />
 
     <Button
@@ -624,84 +600,78 @@
         android:id="@+id/wait1A"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/plane_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait1"
-        app:layout_constraintEnd_toStartOf="@+id/wait1B"
+        app:layout_constraintEnd_toEndOf="@+id/titlePlane"
         app:layout_constraintTop_toTopOf="@+id/wait1" />
 
     <TextView
         android:id="@+id/wait1B"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/soy_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait1"
-        app:layout_constraintEnd_toStartOf="@+id/wait1C"
+        app:layout_constraintEnd_toEndOf="@+id/titleSoy"
         app:layout_constraintTop_toTopOf="@+id/wait1" />
 
     <TextView
         android:id="@+id/wait1C"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/men_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait1"
-        app:layout_constraintEnd_toStartOf="@+id/wait1D"
+        app:layout_constraintEnd_toEndOf="@+id/titleMen"
         app:layout_constraintTop_toTopOf="@+id/wait1" />
 
     <TextView
         android:id="@+id/wait1D"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/pizza_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait1"
-        app:layout_constraintEnd_toStartOf="@+id/wait1E"
+        app:layout_constraintEnd_toEndOf="@+id/titlePizza"
         app:layout_constraintTop_toTopOf="@+id/wait1" />
 
     <TextView
         android:id="@+id/wait1E"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/death_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait1"
-        app:layout_constraintEnd_toStartOf="@+id/wait1F"
+        app:layout_constraintEnd_toEndOf="@+id/titleDeath"
         app:layout_constraintTop_toTopOf="@+id/wait1" />
 
     <TextView
         android:id="@+id/wait1F"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
+        android:background="@drawable/honey_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait1"
-        app:layout_constraintEnd_toStartOf="@+id/wait1del"
+        app:layout_constraintEnd_toEndOf="@+id/titleHoney"
         app:layout_constraintTop_toTopOf="@+id/wait1" />
 
     <Button
@@ -744,76 +714,72 @@
         android:id="@+id/wait0A"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/plane_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait0"
-        app:layout_constraintEnd_toStartOf="@+id/wait0B"
+        app:layout_constraintEnd_toEndOf="@+id/titlePlane"
         app:layout_constraintTop_toTopOf="@+id/wait0" />
 
     <TextView
         android:id="@+id/wait0B"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait0"
-        app:layout_constraintEnd_toStartOf="@+id/wait0C"
-        app:layout_constraintTop_toTopOf="@+id/wait0" />
+        app:layout_constraintEnd_toEndOf="@+id/titleSoy"
+        app:layout_constraintTop_toTopOf="@+id/wait0"
+        android:background="@drawable/soy_flame" />
 
     <TextView
         android:id="@+id/wait0C"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait0"
-        app:layout_constraintEnd_toStartOf="@+id/wait0D"
-        app:layout_constraintTop_toTopOf="@+id/wait0" />
+        app:layout_constraintEnd_toEndOf="@+id/titleMen"
+        app:layout_constraintTop_toTopOf="@+id/wait0"
+        android:background="@drawable/men_flame" />
 
     <TextView
         android:id="@+id/wait0D"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/pizza_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait0"
-        app:layout_constraintEnd_toStartOf="@+id/wait0E"
+        app:layout_constraintEnd_toEndOf="@+id/titlePizza"
         app:layout_constraintTop_toTopOf="@+id/wait0" />
 
     <TextView
         android:id="@+id/wait0E"
         android:layout_width="70dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:background="@drawable/death_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wait0"
-        app:layout_constraintEnd_toStartOf="@+id/wait0F"
+        app:layout_constraintEnd_toEndOf="@+id/titleDeath"
         app:layout_constraintTop_toTopOf="@+id/wait0" />
 
     <TextView
         android:id="@+id/wait0F"
         android:layout_width="70dp"
         android:layout_height="45dp"
+        android:background="@drawable/honey_flame"
         android:gravity="center"
         android:text="@string/zero"
         android:textSize="30sp"
@@ -1076,16 +1042,6 @@
         android:layout_marginRight="16dp"
         android:text="@string/test"
         app:layout_constraintEnd_toEndOf="@+id/orderAll"
-        app:layout_constraintTop_toTopOf="@+id/orderAll" />
-
-    <TextView
-        android:id="@+id/testText"
-        android:layout_width="520dp"
-        android:layout_height="28dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:text="@string/test"
-        app:layout_constraintEnd_toStartOf="@+id/testButton"
         app:layout_constraintTop_toTopOf="@+id/orderAll" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

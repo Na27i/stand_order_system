@@ -6,10 +6,7 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteConstraintException
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import android.database.sqlite.SQLiteException
 import com.example.stand_order_system.models.OrderModel
-
-
 
 class DBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
     override fun onCreate(db: SQLiteDatabase) {
@@ -43,46 +40,51 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null
         return true
     }
 
+    // テーブルのN番目の整理番号の値を取得
+    fun getNum(number: Int): String {
+        val db = writableDatabase
+        val select = "SELECT * FROM " + DBContract.OrderEntry.TABLE_NAME
+        val cursor = db.rawQuery(select, null)
+
+        var result = "9999"
+        cursor.moveToFirst()
+
+        for (i in 0..number) {
+            result = cursor.getInt(0).toString()
+            if(i != number) cursor.moveToNext() }
+        cursor.close()
+
+        return result
+    }
+
+    //整理番号から注文状況を取得
+    fun getOrder( number : String) : List<Int> {
+        val db = writableDatabase
+        val select= "SELECT * FROM " + DBContract.OrderEntry.TABLE_NAME
+        val cursor = db.rawQuery(select, null)
+
+        cursor.moveToFirst()
+        while(cursor.getInt(0).toString() != number) {
+            cursor.moveToNext()
+        }
+
+        return listOf(
+            cursor.getInt(0),
+            cursor.getInt(1),
+            cursor.getInt(2),
+            cursor.getInt(3),
+            cursor.getInt(4),
+            cursor.getInt(5),
+            cursor.getInt(6)
+        )
+        cursor.close()
+    }
+
     fun deleteOrder(number : Int): Boolean{
         val db = writableDatabase
         db.delete(DBContract.OrderEntry.TABLE_NAME, "number=?", arrayOf(number.toString()))
 
         return true
-    }
-
-    fun getOrder(number: Int): ArrayList<OrderModel> {
-        val order = ArrayList<OrderModel>()
-        val db = writableDatabase
-        var cursor: Cursor? = null
-        try {
-            cursor = db.rawQuery("select * from " + DBContract.OrderEntry.TABLE_NAME + " WHERE " + DBContract.OrderEntry.NUMBER + "='" + number + "'", null)
-        } catch (e: SQLiteException) {
-            // if table not yet present, create it
-            db.execSQL(SQL_CREATE_ENTRIES)
-            return ArrayList()
-        }
-
-        var plane: Int
-        var soy: Int
-        var men: Int
-        var pizza: Int
-        var death: Int
-        var honey: Int
-
-        if (cursor!!.moveToFirst()) {
-            while (!cursor.isAfterLast) {
-                plane = cursor.getInt(cursor.getColumnIndex(DBContract.OrderEntry.PLANE_NUM))
-                soy = cursor.getInt(cursor.getColumnIndex(DBContract.OrderEntry.SOY_NUM))
-                men = cursor.getInt(cursor.getColumnIndex(DBContract.OrderEntry.MEN_NUM))
-                pizza = cursor.getInt(cursor.getColumnIndex(DBContract.OrderEntry.MEN_NUM))
-                death = cursor.getInt(cursor.getColumnIndex(DBContract.OrderEntry.MEN_NUM))
-                honey = cursor.getInt(cursor.getColumnIndex(DBContract.OrderEntry.MEN_NUM))
-
-                order.add(OrderModel(number, plane, soy, men, pizza, death, honey))
-                cursor.moveToNext()
-            }
-        }
-        return order
     }
 
     fun getNumOrder(): Int{
